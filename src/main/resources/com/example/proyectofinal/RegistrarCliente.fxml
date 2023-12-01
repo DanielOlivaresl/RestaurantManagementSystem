@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.collections.FXCollections?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<BorderPane fx:controller="com.example.proyectofinal.HelloController"
+            xmlns:fx="http://javafx.com/fxml">
+    <bottom>
+        <VBox style="-fx-padding: 10px;"  >
+
+            <Button fx:id="Button2" text="Regresar" prefWidth="150" onAction="#switchToScene1" />
+
+        </VBox>
+    </bottom>
+
+
+
+    <center>
+        <VBox spacing="10" alignment="CENTER">
+            <TextField fx:id="nombreCliente" maxWidth="190" promptText="Nombre" onKeyReleased="#checkInputRegistroCliente"/>
+            <TextField fx:id="domicilioCliente" maxWidth="190" promptText="Domicilio" onKeyReleased="#checkInputRegistroCliente"/>
+            <TextField fx:id="metodoPago" maxWidth="190" promptText= "MetodoPago" onKeyReleased="#checkInputRegistroCliente"/>
+            <TextField fx:id="telefonoCliente" maxWidth="190" promptText="Telefono" onKeyReleased="#checkInputRegistroCliente"/>
+            <Button fx:id="registrarCliente" text="Registrar Nuevo usuario" prefWidth="150" onAction="#registrarDatosCliente" />
+            <Button fx:id="ingresarCliente" text="Acceder" prefWidth="150" onAction="#ingresarCliente" />
+            <Label fx:id="clientLabel"/>
+        </VBox>
+    </center>
+</BorderPane>
+
+

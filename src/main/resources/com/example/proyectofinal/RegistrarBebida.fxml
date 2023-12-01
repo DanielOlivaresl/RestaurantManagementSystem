@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<BorderPane fx:controller="com.example.proyectofinal.HelloController"
+            xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <VBox alignment="CENTER" spacing="10">
+            <ComboBox fx:id="opcionesPlatillos" prefWidth="200" prefHeight="50" promptText="Select an Item" onAction="#switchBetweenRecetas">
+                <items>
+
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Comida"/>
+                        <String fx:value="Bebida"/>
+                        <String fx:value="Postre"/>
+
+                    </FXCollections>
+
+                </items>
+
+            </ComboBox>
+        </VBox>
+    </top>
+
+    <bottom>
+        <VBox style="-fx-padding: 10px;"  >
+
+            <Button fx:id="Button2" text="Regresar" prefWidth="150" onAction="#switchToScene1" />
+
+        </VBox>
+    </bottom>
+
+
+
+    <center>
+        <VBox spacing="10" alignment="CENTER">
+            <TextField fx:id="nombreBebida" maxWidth="190" promptText="Nombre" onKeyReleased="#checkInputRegistroBebida"/>
+            <TextField fx:id="alcholicaBebida" maxWidth="190" promptText="Es alcholica" onKeyReleased="#checkInputRegistroBebida"/>
+            <TextField fx:id="cantidadBebida" maxWidth="190" promptText="cantidad" onKeyReleased="#checkInputRegistroBebida"/>
+            <TextField fx:id="precioBebida" maxWidth="190" promptText= "Precio" onKeyReleased="#checkInputRegistroBebida"/>
+            <Button fx:id="buttonBebida" text="Registrar Bebida" prefWidth="150" onAction="#registrarDatosBebida" />
+            <Label fx:id="registrarBebidaLabel"/>
+        </VBox>
+    </center>
+</BorderPane>
+
+

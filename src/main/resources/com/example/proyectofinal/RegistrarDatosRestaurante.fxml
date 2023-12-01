@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.collections.FXCollections?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.StackPane?>
+<BorderPane fx:controller="com.example.proyectofinal.HelloController"
+            xmlns:fx="http://javafx.com/fxml">
+
+
+
+    <bottom>
+
+
+
+
+
+                <HBox alignment="BOTTOM_LEFT" style="-fx-padding: 10px;">
+
+                    <Button fx:id="Button2" text="Regresar"  onAction="#switchToScene1" alignment="BOTTOM_LEFT"/>
+                </HBox>
+
+
+
+    </bottom>
+
+
+            <left>
+                <VBox spacing="10" style="-fx-padding: 10px;">
+
+
+                    <TextField fx:id="nombreRestaurante" maxWidth="190" promptText="Nombre" alignment="BOTTOM_RIGHT"/>
+                    <TextField fx:id="ubicacionRestaurante" maxWidth="190" promptText= "Ubicacion" alignment="BOTTOM_RIGHT"/>
+                    <TextField fx:id="calificacionRestaurante" maxWidth="190" promptText= "Descripcion" alignment="BOTTOM_RIGHT"/>
+                    <Button  text="Registar" onAction="#actualizarRestaurante" />
+
+                </VBox>
+
+            </left>
+
+            <center>
+                <VBox>
+
+
+                    <TextArea fx:id="datosRestaurante" prefWidth="150" prefHeight="500" editable="false" text="" onMouseClicked="#mensajeRegistrarRestaurante">
+
+                    </TextArea>
+                </VBox>
+
+            </center>
+
+
+
+
+
+
+    </BorderPane>
+

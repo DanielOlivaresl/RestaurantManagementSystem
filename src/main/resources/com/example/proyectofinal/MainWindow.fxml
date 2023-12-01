@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.proyectofinal.HelloController"
+            prefHeight="400.0" prefWidth="600.0">
+
+        <center>
+
+            <VBox alignment="CENTER" spacing="10">
+                <Button text="Mostrar Menu" prefWidth="200" onAction="#switchToScene2" >
+                    <graphic>
+                        <ImageView fitWidth="30" fitHeight="30">
+                            <image>
+                                <Image url="C:\Users\stani\IdeaProjects\ProyectoFinal\src\main\resources\Resources\menu-png-icon-4.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <Button text="Realizar Pedido" prefWidth="200" onAction="#switchToSceneRegistrarCliente">
+
+                        <graphic>
+                            <ImageView fitWidth="30" fitHeight="30">
+                                <image>
+                                    <Image url="C:\Users\stani\IdeaProjects\ProyectoFinal\src\main\resources\Resources\MakeOrder.png"/>
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                <Button text="Registrar Repartidores" prefWidth="200" onAction="#switchToScene6">
+                    <graphic>
+                        <ImageView fitWidth="30" fitHeight="30">
+                            <image>
+                                <Image url="C:\Users\stani\IdeaProjects\ProyectoFinal\src\main\resources\Resources\RegistrarRepartidores.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button text="Registrar Platillo" prefWidth="200" onAction="#switchToScene4">
+                    <graphic>
+                        <ImageView fitWidth="30" fitHeight="30">
+                            <image>
+                                <Image url="C:\Users\stani\IdeaProjects\ProyectoFinal\src\main\resources\Resources\dish.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <Button text="Registar Datos" prefWidth="200" onAction="#switchToScene5" >
+                <graphic>
+                    <ImageView fitWidth="30" fitHeight="30">
+                        <image>
+                            <Image url="C:\Users\stani\IdeaProjects\ProyectoFinal\src\main\resources\Resources\register.jpg"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+                </Button>
+
+                <Button text="Salir" prefWidth="200" onAction="#quitProgram">
+                    <graphic>
+                        <ImageView fitWidth="30" fitHeight="30">
+                            <image>
+                                <Image url="C:\Users\stani\IdeaProjects\ProyectoFinal\src\main\resources\Resources\Quit.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </VBox>
+
+        </center>
+
+
+
+</BorderPane>

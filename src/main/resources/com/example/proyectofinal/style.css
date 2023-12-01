@@ -1,0 +1,8 @@
+.stack-pane {
+    -fx-background-image: url('C:\Users\stani\IdeaProjects\ProyectoFinal\src\main\resources\Resources\Fondo.jpeg');
+    -fx-background-size: cover;
+}
+
+.border-pane {
+    -fx-background-color: transparent;
+}

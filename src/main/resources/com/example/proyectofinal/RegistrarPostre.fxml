@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.collections.FXCollections?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<BorderPane fx:controller="com.example.proyectofinal.HelloController"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <top>
+        <VBox alignment="CENTER" spacing="10">
+            <ComboBox fx:id="opcionesPlatillos" prefWidth="200" prefHeight="50" promptText="Select an Item" onAction="#switchBetweenRecetas">
+                <items>
+
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Comida"/>
+                        <String fx:value="Bebida"/>
+                        <String fx:value="Postre"/>
+
+                    </FXCollections>
+
+                </items>
+
+            </ComboBox>
+        </VBox>
+    </top>
+
+
+    <bottom>
+        <VBox style="-fx-padding: 10px;"  >
+
+            <Button fx:id="Button2" text="Regresar" prefWidth="150" onAction="#switchToScene1" />
+
+        </VBox>
+    </bottom>
+
+
+
+    <center>
+        <VBox spacing="10" alignment="CENTER">
+            <TextField fx:id="nombrePostre" maxWidth="190" promptText="Nombre" onKeyReleased="#checkInputRegistroPostre"/>
+            <TextField fx:id="saborPostre" maxWidth="190" promptText="Sabor" onKeyReleased="#checkInputRegistroPostre"/>
+            <TextField fx:id="numR" maxWidth="190" promptText= "Numero de Rebanadas" onKeyReleased="#checkInputRegistroPostre"/>
+            <TextField fx:id="caloriasPostre" maxWidth="190" promptText="Calorias" onKeyReleased="#checkInputRegistroPostre"/>
+            <Button fx:id="buttonPostre" text="Agregar Postre" prefWidth="150" onAction="#registrarDatosPostre" />
+            <Label fx:id="registrarPostreLabel"/>
+        </VBox>
+    </center>
+</BorderPane>
+
+

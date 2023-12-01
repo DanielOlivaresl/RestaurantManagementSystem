@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<BorderPane fx:controller="com.example.proyectofinal.HelloController"
+            xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <VBox alignment="CENTER" spacing="10">
+            <ComboBox fx:id="opcionesPlatillos" prefWidth="200" prefHeight="50" promptText="Select an Item" onAction="#switchBetweenRecetas">
+                <items>
+
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Comida"/>
+                        <String fx:value="Bebida"/>
+                        <String fx:value="Postre"/>
+
+                    </FXCollections>
+
+                </items>
+
+            </ComboBox>
+        </VBox>
+    </top>
+
+    <bottom>
+        <VBox style="-fx-padding: 10px;"  >
+
+            <Button fx:id="Button2" text="Regresar" prefWidth="150" onAction="#switchToScene1" />
+
+        </VBox>
+    </bottom>
+
+
+
+    <center>
+        <VBox spacing="10" alignment="CENTER">
+            <TextField fx:id="costoComida" maxWidth="190" promptText="Costo" onKeyReleased="#checkInputRegistroComida"/>
+            <TextField fx:id="nombreComida" maxWidth="190" promptText="Nombre" onKeyReleased="#checkInputRegistroComida"/>
+            <TextField fx:id="origenComida" maxWidth="190" promptText="Origen" onKeyReleased="#checkInputRegistroComida"/>
+            <Button fx:id="buttonComida" text="Registrar Pedido" prefWidth="150" onAction="#registrarDatosComida" />
+            <Label fx:id="registrarComidaLabel"/>
+        </VBox>
+    </center>
+</BorderPane>
+
+
